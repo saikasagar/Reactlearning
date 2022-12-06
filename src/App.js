@@ -1,4 +1,5 @@
 import dom from "dom";
+import Api from "./Api";
 import React from "react";
 import "./Todo";
 import { Routes, BrowserRouter as Router, Route } from 'react-router-dom';
@@ -15,6 +16,8 @@ function App() {
         <Routes >
         <Route element = { <Login/> } path = "" />
         <Route element = { <Todo/> } path = "/todo" />
+        <Route element = { <Api/> } path = '/api' />
+
         </Routes>
          </Router>
 

@@ -26,6 +26,13 @@ function Todo  ()  {
 		console.log(todos);
 		
 	}
+	 const deleteTodo=(e,i)=>{
+		e.preventDefault();
+		setIndex(i)
+		console.log(i);
+		let data = todos.splice()
+		setTodos (data);
+	 }
 
 	const editTodo = () => {
 		let data = todos.map((res,i)=>{
@@ -58,7 +65,7 @@ function Todo  ()  {
 						<li key={res.id}><input type="checkbox"/><label> {res.todo}</label><input type="text"/>
 						 <button onClick={(e)=>
 						 {edit(e,res.todo, i)}}>Edit</button>
-						<button >Delete</button></li>
+						<button onClick={(e)=>deleteTodo(e,i)}>Delete</button></li>
 
 					)
 				})
